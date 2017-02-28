@@ -1,0 +1,50 @@
+Script started on Tue 28 Feb 2017 09:23:14 AM UTC
+[01;32mphlam1[00m:[01;34m~/workspace/NewFolder[00m (master) $ mv a2.[K[K[K[K[K[Kcd ~
+[01;32mphlam1[00m:[01;34m~[00m $ ls
+[0m[01;34mlib[0m/  [01;34mworkspace[0m/
+[01;32mphlam1[00m:[01;34m~[00m $ cd workspace/
+[01;32mphlam1[00m:[01;34m~/workspace[00m (master) $ ls
+[0m[01;34mNewFolder[0m/  [01;34mNoGo2[0m/  README.md  a2.tgz  [01;34mgogui-1.4.9[0m/
+[01;32mphlam1[00m:[01;34m~/workspace[00m (master) $ mv a2.tgz NewFolder/
+[01;32mphlam1[00m:[01;34m~/workspace[00m (master) $ ls [K[K[Kcd NewFolder/
+[01;32mphlam1[00m:[01;34m~/workspace/NewFolder[00m (master) $ tar -xvzf a2.tgz 
+NoGo2/
+NoGo2/gtp_connection.py
+NoGo2/Go1.py
+NoGo2/public-tests-nogo-solve.gtp.out.html
+NoGo2/nogosolvertest.gtp.html
+NoGo2/summary.dat
+NoGo2/test_cases_medium.gtp.html
+NoGo2/test_cases_medium.gtp.out.html
+NoGo2/board_util.pyc
+NoGo2/board.pyc
+NoGo2/test_cases_easy.gtp.out.html
+NoGo2/test_cases_easy.gtp
+NoGo2/test_cases_medium.gtp
+NoGo2/gtp_connection.pyc
+NoGo2/nogosolvertest.gtp.out.html
+NoGo2/index.html
+NoGo2/__pycache__/
+NoGo2/__pycache__/gtp_connection.cpython-34.pyc
+NoGo2/__pycache__/board.cpython-34.pyc
+NoGo2/__pycache__/board_util.cpython-34.pyc
+NoGo2/board_util.py
+NoGo2/test_cases_hard.gtp
+NoGo2/public-tests-nogo-solve.gtp.html
+NoGo2/nogosolvertest.gtp
+NoGo2/board.py
+NoGo2/test_cases_easy.gtp.html
+NoGo2/a2-sample.gtp
+NoGo2/public-tests-nogo-solve.gtp
+[01;32mphlam1[00m:[01;34m~/workspace/NewFolder[00m (master) $ cd NoGo2/
+[01;32mphlam1[00m:[01;34m~/workspace/NewFolder/NoGo2[00m (master) $ ls
+[0m[01;32mGo1.py[0m*        board.pyc          gtp_connection.pyc       nogosolvertest.gtp.out.html           summary.dat                   test_cases_hard.gtp
+[01;34m__pycache__[0m/   board_util.py      index.html               public-tests-nogo-solve.gtp           test_cases_easy.gtp           test_cases_medium.gtp
+a2-sample.gtp  board_util.pyc     nogosolvertest.gtp       public-tests-nogo-solve.gtp.html      test_cases_easy.gtp.html      test_cases_medium.gtp.html
+board.py       gtp_connection.py  nogosolvertest.gtp.html  public-tests-nogo-solve.gtp.out.html  test_cases_easy.gtp.out.html  test_cases_medium.gtp.out.html
+[01;32mphlam1[00m:[01;34m~/workspace/NewFolder/NoGo2[00m (master) $ gogui-regress Go1.py a2-sample.gtp 
+[01;32mphlam1[00m:[01;34m~/workspace/NewFolder/NoGo2[00m (master) $ gogui-regress Go1.py a2-sample.gtp [K[K[K[K[K[K[K[K[K[K[K[K[K[Knogosolvertest.gtp
+[01;32mphlam1[00m:[01;34m~/workspace/NewFolder/NoGo2[00m (master) $ exit
+exit
+
+Script done on Tue 28 Feb 2017 09:30:12 AM UTC
