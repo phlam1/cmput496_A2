@@ -11,6 +11,8 @@ from board import GoBoard
 from board_util import GoBoardUtil, BLACK, WHITE, EMPTY, BORDER, FLOODFILL
 import numpy as np
 import re
+import signal
+import warnings
 
 class GtpConnection():
 
@@ -360,12 +362,37 @@ class GtpConnection():
         Solves the current game state and returns the winner and the winning move.
         
         """
-        winner, last_move, first_move = GoBoardUtil.solve(self.board, self.timelimit)
+
+        signal.signal(signal.SIGALRM, self.handler)
+        signal.alarm(self.timelimit)
+        
+        """
         if winner is -1:
             self.respond("unknown")
         else:
+            signal.alarm(0) 
             if self.board.to_play is winner:
                 self.respond("{} {}".format(GoBoardUtil.int_to_color(winner), GoBoardUtil.format_point(self.board._point_to_coord(last_move))))
             else:
                 self.respond("{}".format(GoBoardUtil.int_to_color(winner)))
+        """
+        
+        
+        try:
+       #winner, last_move, first_move = GoBoardUtil.solve(self.board, self.timelimit)
+            winner, last_move, first_move = GoBoardUtil.solve(self.board)
+        
+            if self.board.to_play is winner:
+                self.respond("{} {}".format(GoBoardUtil.int_to_color(winner), GoBoardUtil.format_point(self.board._point_to_coord(last_move))))
+            else:
+                self.respond("{}".format(GoBoardUtil.int_to_color(winner)))
+                
+        except RuntimeError:
+            self.respond("unknown")
+            warnings.warn("Times Up")
+            
+        signal.alarm(0) 
+                
+    def handler(self, signum, frame):
+        raise RuntimeError
 

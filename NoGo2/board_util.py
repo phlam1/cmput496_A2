@@ -86,6 +86,7 @@ class GoBoardUtil(object):
                 move = moves[i]        
         return move
     
+    """
     @staticmethod
     def solve(board, timelimit, last_move = None, start_time = None, first_move = None):
         if start_time is None:
@@ -101,6 +102,22 @@ class GoBoardUtil(object):
             board_copy = board.copy()
             board_copy.move(move, board.to_play)
             winner, last_move, first_move = GoBoardUtil.solve(board_copy, timelimit, move, start_time, first_move)
+            if (winner != GoBoardUtil.opponent(board.to_play)):
+                return winner, move, first_move
+        return winner, last_move, first_move
+    """
+    
+    @staticmethod
+    def solve(board, last_move = None, first_move = None):
+        winner = board.get_winner()
+        if (winner != None):
+            return winner, last_move, first_move
+        first_move = None
+        for move in GoBoardUtil.generate_legal_points(board, board.to_play):
+            first_move = move
+            board_copy = board.copy()
+            board_copy.move(move, board.to_play)
+            winner, last_move, first_move = GoBoardUtil.solve(board_copy, move, first_move)
             if (winner != GoBoardUtil.opponent(board.to_play)):
                 return winner, move, first_move
         return winner, last_move, first_move

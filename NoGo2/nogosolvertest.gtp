@@ -1,0 +1,201 @@
+
+boardsize 3
+clear_board
+play b a1
+# Black plays a1
+play w a3
+# White plays a3
+play b b1
+# Black plays b1
+play w b3
+# White plays b3
+play b c1
+# Black plays on the entire top row
+play w c3
+# White plays on the entire lower row
+# toplay is Black
+# solve for Black
+10 solve
+#?[w]
+# White wins with c2 
+
+
+boardsize 3
+clear_board
+play b a1
+# Black plays a1
+play w c3
+# White plays c3
+play b b1
+# Black plays b1 
+play w b3
+# White plays b3
+play b c1
+# Black plays c1
+play w a3
+# White plays a3
+play b c2
+# Black plays c2
+play w a2
+# White plays a2
+# Black toplay solve
+# Winner is white since there is no more possible moves
+20 solve
+#?[w]
+
+
+boardsize 4
+clear_board
+play b b1
+# Black plays b1
+play w c1
+# White plays c1
+play b a2
+# Black plays a2
+play w d1
+# White plays d1
+play b c2
+# Black plays c2
+play w b2
+# White plays b2
+play b a3
+# Black plays a3
+play w c3
+# White plays c3
+play b d3
+# Black plays d3
+play w d4
+# White plays d4
+play b b4
+# Black plays b4
+# White toplay solve
+# Winner is black since it still has two avaliable spaces where as white only has one
+30 solve
+#?[b]
+
+
+boardsize 4
+clear_board
+play w b1
+# White plays b1
+play b b2
+# Black plays b2
+play w a2
+# White plays a2
+play b a3
+# Black plays a3
+play w c2
+# White plays c2
+play b c3
+# Black plays c4
+play w c4
+# White plays c4
+play b b4
+# Black plays b4
+# White toplay solve
+# White can win if perfect play (plays d3)
+40 solve
+#?[w d3]
+
+
+boardsize 4
+clear_board
+timelimit 3
+# timelimit 3 second
+play b b1
+# Black plays b1
+play w d1
+# White plays d1
+play b a2
+# Black plays a2
+play w c2
+# White plays c2
+play b b2
+# Black plays b2
+play w d2
+# White plays d2
+play b b3
+# Black plays b3
+play w c4
+# White plays c4
+play b a4
+# Black plays a4
+# White toplay solve
+# Winner is Black as it has already secure two eyes
+50 solve
+#?[b]
+
+boardsize 4
+clear_board
+timelimit 1
+# timelimit 1 second
+play b b1
+# Black plays b1
+play w d1
+# White plays d1
+play b a2
+# Black plays a2
+play w c2
+# White plays c2
+play b b2
+# Black plays b2
+play w d2
+# White plays d2
+play b b3
+# Black plays b3
+play w c4
+# White plays c4
+play b a4
+# Black plays a4
+# White toplay solve
+# Winner is Black as it has already secure two eyes
+60 solve
+#?[b]
+
+
+boardsize 4
+clear_board
+# default timelimit 1 second
+play b b1
+play w c4
+play b c2
+play w b3
+play b c3
+70 solve
+#?[unknown]
+
+boardsize 4
+clear_board
+# 30 seconds to solve
+timelimit 30
+play b b1
+play w c4
+play b c2
+play w b3
+play b c3
+80 solve
+#?[w d2|w d3|w a3|w a4|w b2|w a1|w a2]
+
+boardsize 5
+clear_board
+# 30 seconds to solve
+timelimit 30
+play b b1
+play w c4
+play b c2
+play w b3
+play b c3
+90 solve
+#?[unknown]
+
+boardsize 5
+clear_board
+# 30 seconds to solve
+timelimit 100
+play b b1
+play w c4
+play b c2
+play w b3
+play b c3
+100 solve
+#?[unknown]
