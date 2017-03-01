@@ -23,7 +23,7 @@ span.test { font-weight:bold; }
 </td></tr>
 </table>
 <table width="100%" bgcolor="#e0e0e0">
-<tr><th align="left">Date:</th><td>February 28, 2017 9:27:11 AM UTC</td></tr>
+<tr><th align="left">Date:</th><td>March 1, 2017 3:44:51 AM UTC</td></tr>
 <tr><th align="left">Host:</th><td>phlam1-cmput496-a2-4443236 (Intel(R) Xeon(R) CPU @ 2.30GHz)</td></tr>
 <tr><th align="left" valign="top">Command:</th>
 <td valign="top"><tt>Go1.py</tt></td></tr>
@@ -348,19 +348,26 @@ cputime
 </span><span class="command">play b b1
 </span>= 
 
-<span class="command">play w c4
+<span class="comment"># Black plays b1
+</span><span class="command">play w c4
 </span>= 
 
-<span class="command">play b c2
+<span class="comment"># White plays c4
+</span><span class="command">play b c2
 </span>= 
 
-<span class="command">play w b3
+<span class="comment"># Black plays c2
+</span><span class="command">play w b3
 </span>= 
 
-<span class="command">play b c3
+<span class="comment"># White plays b3
+</span><span class="command">play b c3
 </span>= 
 
-<span class="test"><a name="70">70 solve
+<span class="comment"># Black plays c3
+# White toplay solve
+# Solver returns unknown due to timeout
+</span><span class="test"><a name="70">70 solve
 </a>#?[unknown]
 = unknown
 
@@ -378,21 +385,28 @@ cputime
 <span class="command">play b b1
 </span>= 
 
-<span class="command">play w c4
+<span class="comment"># Black plays b1
+</span><span class="command">play w c4
 </span>= 
 
-<span class="command">play b c2
+<span class="comment"># White plays c4
+</span><span class="command">play b c2
 </span>= 
 
-<span class="command">play w b3
+<span class="comment"># Black plays c2
+</span><span class="command">play w b3
 </span>= 
 
-<span class="command">play b c3
+<span class="comment"># White plays b3
+</span><span class="command">play b c3
 </span>= 
 
-<span class="test"><a name="80">80 solve
+<span class="comment"># Black plays c3
+# White toplay solve
+# Given 30 seconds timelimit returns best move
+</span><span class="test"><a name="80">80 solve
 </a>#?[w d2|w d3|w a3|w a4|w b2|w a1|w a2]
-= w d2
+= w a4
 
 </span>
 <span class="command">boardsize 5
@@ -408,19 +422,27 @@ cputime
 <span class="command">play b b1
 </span>= 
 
-<span class="command">play w c4
+<span class="comment"># Black plays b1
+</span><span class="command">play w c4
 </span>= 
 
-<span class="command">play b c2
+<span class="comment"># White plays c4
+</span><span class="command">play b c2
 </span>= 
 
-<span class="command">play w b3
+<span class="comment"># Black plays c2
+</span><span class="command">play w b3
 </span>= 
 
-<span class="command">play b c3
+<span class="comment"># White plays b3
+</span><span class="command">play b c3
 </span>= 
 
-<span class="test"><a name="90">90 solve
+<span class="comment"># Black plays c3
+# White toplay solve
+# Given 30 seconds timelimit
+# same timelimit but 5*5 board is too hard to solve returns unknown
+</span><span class="test"><a name="90">90 solve
 </a>#?[unknown]
 = unknown
 
@@ -438,19 +460,26 @@ cputime
 <span class="command">play b b1
 </span>= 
 
-<span class="command">play w c4
+<span class="comment"># Black plays b1
+</span><span class="command">play w c4
 </span>= 
 
-<span class="command">play b c2
+<span class="comment"># White plays c4
+</span><span class="command">play b c2
 </span>= 
 
-<span class="command">play w b3
+<span class="comment"># Black plays c2
+</span><span class="command">play w b3
 </span>= 
 
-<span class="command">play b c3
+<span class="comment"># White plays b3
+</span><span class="command">play b c3
 </span>= 
 
-<span class="test"><a name="100">100 solve
+<span class="comment"># Black plays c3
+# White toplay solve
+# Max timelimit still not enough time for our solver returns unknown
+</span><span class="test"><a name="100">100 solve
 </a>#?[unknown]
 = unknown
 
@@ -461,12 +490,12 @@ cputime
 ? Unknown command
 
 quit
+= 
+
 <span class="stderr">/home/ubuntu/workspace/NewFolder/NoGo2/gtp_connection.py:379: UserWarning: Times Up
   warnings.warn("Times Up")
-</span>= 
-
-</pre>
+</span></pre>
 <hr style="margin-bottom:0" size="1">
-<p style="margin-top:1; margin-right:5" align="right"><i><small>Generated on 2/28/17 9:29 AM by gogui-regress 1.4.9 (<a href="http://gogui.sf.net">http://gogui.sf.net</a>)</small></i></p>
+<p style="margin-top:1; margin-right:5" align="right"><i><small>Generated on 3/1/17 3:47 AM by gogui-regress 1.4.9 (<a href="http://gogui.sf.net">http://gogui.sf.net</a>)</small></i></p>
 </body>
 </html>

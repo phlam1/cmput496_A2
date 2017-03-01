@@ -157,10 +157,17 @@ boardsize 4
 clear_board
 # default timelimit 1 second
 play b b1
+# Black plays b1
 play w c4
+# White plays c4
 play b c2
+# Black plays c2
 play w b3
+# White plays b3
 play b c3
+# Black plays c3
+# White toplay solve
+# Solver returns unknown due to timeout
 70 solve
 #?[unknown]
 
@@ -169,10 +176,17 @@ clear_board
 # 30 seconds to solve
 timelimit 30
 play b b1
+# Black plays b1
 play w c4
+# White plays c4
 play b c2
+# Black plays c2
 play w b3
+# White plays b3
 play b c3
+# Black plays c3
+# White toplay solve
+# Given 30 seconds timelimit returns best move
 80 solve
 #?[w d2|w d3|w a3|w a4|w b2|w a1|w a2]
 
@@ -181,10 +195,18 @@ clear_board
 # 30 seconds to solve
 timelimit 30
 play b b1
+# Black plays b1
 play w c4
+# White plays c4
 play b c2
+# Black plays c2
 play w b3
+# White plays b3
 play b c3
+# Black plays c3
+# White toplay solve
+# Given 30 seconds timelimit
+# same timelimit but 5*5 board is too hard to solve returns unknown
 90 solve
 #?[unknown]
 
@@ -193,9 +215,16 @@ clear_board
 # 30 seconds to solve
 timelimit 100
 play b b1
+# Black plays b1
 play w c4
+# White plays c4
 play b c2
+# Black plays c2
 play w b3
+# White plays b3
 play b c3
+# Black plays c3
+# White toplay solve
+# Max timelimit still not enough time for our solver returns unknown
 100 solve
 #?[unknown]
